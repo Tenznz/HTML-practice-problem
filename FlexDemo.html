@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A basic Flex Demo page</title>
+    <link rel="shortcut icon" href="./assets/fav.png">
+    <style>
+        body{
+            padding: 2em;
+        }
+
+        .headContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .footerContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .mainContainer{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .mainContentItem{
+            text-align: left;
+            background: deepskyblue;
+        }
+
+        article{
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+
+        .sideBarLeftItem{background: gold;}
+        .sideBarRightItem{background: hotpink;}
+
+        .sideBarItem{
+            flex: 1 0 0;
+            border: 0px solid green;
+        }
+
+        .mainContentItem{flex: 3 0px;}
+        
+        .sideBarLeftItem{order: 1;}
+        .mainContentItem{order: 2;}
+        .sideBarRightItem{order: 3;}
+    </style>
+</head>
+<body>
+    <header class="headContainer"><h1>Sample Flexbox Example</h1></header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article>
+                <h2>First article</h2>
+                <p>Be the change that you wish to see in the world.</p>
+            </article>
+            <article>
+                <h2>Second article</h2>
+                <p>Live as if you were to die tomorrow.
+                    Learn as if you were to live forever.</p>
+            </article>
+            <article>
+                <h2>Third article</h2>
+                <p>There are only two ways to live your life.
+                    One is as though nothing is a miracle.
+                    The other is as though everything is a miracle.</p>
+            </article>
+        </section>
+        <sidebar class="sideBarItem sideBarLeftItem">Left side Bar</sidebar>
+        <sidebar class="sideBarItem sideBarRightItem">Right  Side Bar</sidebar>
+    </div>
+    <footer class="footerContainer">Footer</footer>
+</body>
+</html>
